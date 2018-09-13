@@ -1,0 +1,9 @@
+*.pyc
+.idea/*
+build/*
+dist
+sandbox/*
+__pycache__/*
+.ipynb_checkpoints/*
+files.txt
+docs/_build/*
