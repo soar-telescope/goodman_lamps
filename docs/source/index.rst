@@ -12,6 +12,8 @@ Welcome to Reference Lamps Library's documentation!
 
    plots_400
    plots_600
+   plots_930
+   plots_1200
 
 
 .. toctree::
