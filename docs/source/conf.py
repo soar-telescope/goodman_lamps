@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Goodman HTS Pipeline User Manual documentation build configuration file, created by
-# sphinx-quickstart on Fri Jun 30 18:30:57 2017.
+# Reference Lamps Library documentation build configuration file, created by
+# sphinx-quickstart on Thu Sep 13 12:52:15 2018.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -16,11 +17,17 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# sys.path.append(os.path.abspath('sphinxext'))
 
+__version__ = __import__('goodman_lamps').__version__
+
+
+extensions = ['matplotlib.sphinxext.only_directives',
+              'matplotlib.sphinxext.plot_directive']
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -30,24 +37,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-
-__version__ = __import__('pipeline').__version__
-
-extensions = ['sphinx.ext.todo',
-              'sphinx.ext.coverage',
-              'sphinx.ext.githubpages',
-              'sphinx.ext.autodoc',
-              'sphinx.ext.mathbase',
-              'sphinx.ext.intersphinx',
-              'sphinxcontrib.napoleon']
-
-
-intersphinx_mapping = {
-    'astropy': ('http://docs.astropy.org/en/latest/', None),
-    'ccdproc': ('https://ccdproc.readthedocs.io/en/latest/', None),
-    'pandas': ('http://pandas.pydata.org/pandas-docs/stable/', None),
-    'numpy': ('https://numpy.readthedocs.io/en/latest/', None),
-    'cython': ('http://docs.cython.org/en/latest/', None)}
+# extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -62,10 +52,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Goodman HTS Pipeline Documentation'
-copyright = u'2017 NOAO/AURA, Inc. All rights reserved'
-author = u'Simón Torres R., Bruno C. Quint, César Briceño'
-license = 'bsd3'
+project = 'Reference Lamps Library'
+copyright = '2018, Simon Torres'
+author = 'Simon Torres'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -92,46 +81,49 @@ exclude_patterns = []
 pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
+todo_include_todos = False
 
-# -- Options for PDF output ----------------------------------------------
-
-pdf_documents = [('user_manual',
-                  u'user_manual_v{:s}'.format(release),
-                  u'Goodman HTS Pipeline User Manual',
-                  u'Simón Torres, César Briceño and Bruno Quint'), ]
-# pdf_break_level = 0
 
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = 'bootstrap-astropy'
+# html_theme = 'alabaster'
 
 html_theme = 'sphinx_rtd_theme'
-
-html_context = {'license': 'BSD 3-Clause License'}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {
-#     'logotext1': 'Goodman',
-#     'logotext2': 'Pipeline',
-#     'logotext3': ':User Manual'}
+# html_theme_options = {}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['_static']
-# html_style = 'goodman.css'
+html_static_path = ['_static']
+
+# Custom sidebar templates, must be a dictionary that maps document names
+# to template names.
+#
+# This is required for the alabaster theme
+# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',  # needs 'show_related': True theme option to display
+        'searchbox.html',
+        'donate.html',
+    ]
+}
+
 
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'GoodmanHTSPipelineUserManualdoc'
+htmlhelp_basename = 'ReferenceLampsLibrarydoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -158,8 +150,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'GoodmanHTSPipelineUserManual.tex', u'Goodman HTS Pipeline User Manual Documentation',
-     u'Simon Torres R.', 'manual'),
+    (master_doc, 'ReferenceLampsLibrary.tex', 'Reference Lamps Library Documentation',
+     'Simon Torres', 'manual'),
 ]
 
 
@@ -168,7 +160,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'goodmanhtspipelineusermanual', u'Goodman HTS Pipeline User Manual Documentation',
+    (master_doc, 'referencelampslibrary', 'Reference Lamps Library Documentation',
      [author], 1)
 ]
 
@@ -179,31 +171,10 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'GoodmanHTSPipelineUserManual', u'Goodman HTS Pipeline User Manual Documentation',
-     author, 'GoodmanHTSPipelineUserManual', 'One line description of project.',
+    (master_doc, 'ReferenceLampsLibrary', 'Reference Lamps Library Documentation',
+     author, 'ReferenceLampsLibrary', 'One line description of project.',
      'Miscellaneous'),
 ]
 
-
-
-# -- Options for Epub output ----------------------------------------------
-
-# Bibliographic Dublin Core info.
-epub_title = project
-epub_author = author
-epub_publisher = author
-epub_copyright = copyright
-
-# The unique identifier of the text. This can be a ISBN number
-# or the project homepage.
-#
-# epub_identifier = ''
-
-# A unique identification for the text.
-#
-# epub_uid = ''
-
-# A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
 
 
