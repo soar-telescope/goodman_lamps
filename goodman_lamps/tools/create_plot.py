@@ -47,9 +47,14 @@ class LineList(object):
 
     def _get_spectrum_from_nist(self, wavelength):
         assert self._nist is not None
-        sub_df = self._nist[np.isclose(self._nist.air_wavelength, wavelength)]
-        if not sub_df.empty:
+        sub_df = self._nist[np.isclose(self._nist.air_wavelength,
+                                       wavelength,
+                                       atol=1e-9,
+                                       rtol=1e-9)]
+        if not sub_df.empty and len(sub_df) == 1:
             return sub_df['spectrum'].item()
+        elif len(sub_df) > 1:
+            return ''
         else:
             return ''
 
@@ -128,7 +133,7 @@ def create_plot(mode):
 # #     print(mod)
 if __name__ == '__main__':
 
-    create_plot('930M6')
+    create_plot('1200M1')
 
 
 
