@@ -24,7 +24,7 @@ import sys
 # sys.path.append(os.path.abspath('sphinxext'))
 
 __version__ = __import__('goodman_lamps').__version__
-
+# __version__ = '0.1.0'
 
 extensions = ['matplotlib.sphinxext.only_directives',
               'matplotlib.sphinxext.plot_directive']
@@ -92,6 +92,8 @@ todo_include_todos = False
 # html_theme = 'alabaster'
 
 html_theme = 'sphinx_rtd_theme'
+
+html_logo = '_static/soar_logo.png'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

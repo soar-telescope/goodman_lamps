@@ -4,7 +4,7 @@
 1200 M0
 *******
 
-..  .. plot:: plots/plot_1200m0.py
+.. plot:: plots/plot_1200m0.py
 
 1200 M1
 *******

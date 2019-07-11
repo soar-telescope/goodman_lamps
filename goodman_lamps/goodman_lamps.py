@@ -8,7 +8,7 @@ import sys
 import glob
 from ccdproc import CCDData
 
-from pipeline.wcs import WCS
+from goodman_pipeline.wcs import WCS
 
 goodman_wcs = WCS()
 
