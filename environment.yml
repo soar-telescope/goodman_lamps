@@ -1,17 +1,19 @@
-name: goodman_focus
-  channels:
-    - astroconda
-  dependencies:
-    - astropy
-    - matplotlib
-    - numpy
-    - pandas
-    - pip
-    - scipy
-    - pip:
-        - goodman_pipeline==1.2.0
-        - ccdproc
-        - coveralls
-        - m2r
-        - sphinx
-        - sphinxcontrib.napoleon
+name: goodman_lamps
+channels:
+  - astroconda
+dependencies:
+  - qt
+  - astropy
+  - matplotlib==2.1.0
+  - numpy
+  - pandas==0.23.0
+  - pip
+  - scipy
+  - pip:
+      - pyqt5
+      - ccdproc
+      - coveralls
+      - m2r
+      - sphinx
+      - sphinxcontrib.napoleon
+      - goodman_pipeline==1.2.1.dev6

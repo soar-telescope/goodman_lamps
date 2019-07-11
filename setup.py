@@ -15,7 +15,6 @@ import sys
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 
-from sphinx.setup_command import BuildDoc
 # To use a consistent encoding
 from codecs import open
 
@@ -64,8 +63,7 @@ GITHUB_PROJECT = metadata['github_project']
 create_version_py(PACKAGENAME, VERSION)
 
 
-cmdclassd = {'build_sphinx': BuildDoc,
-             'build_docs': BuildDoc}
+
 
 setup(
     name=metadata['package_name'],
@@ -83,9 +81,7 @@ setup(
     url='https://github.com/{:s}0'.format(GITHUB_PROJECT),
 
     # Author details
-    author=u'Simon Torres R.'
-           ,
-    cmdclass=cmdclassd,
+    author=u'Simon Torres R.',
 
     author_email='storres@ctio.noao.edu, '
                  'cbriceno@ctio.noao.edu',
