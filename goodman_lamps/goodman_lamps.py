@@ -8,7 +8,7 @@ import sys
 import glob
 from ccdproc import CCDData
 
-from pipeline.wcs import WCS
+from goodman_pipeline.wcs import WCS
 
 goodman_wcs = WCS()
 
@@ -87,8 +87,14 @@ def create_plot(mode):
     data_path = os.path.dirname(__import__('goodman_lamps').__file__)
     search_pattern = os.path.join(data_path,
                                   'data/lamps/*{:s}*.fits'.format(mode))
+    print(data_path)
+    print(search_pattern)
 
-    for file_name in glob.glob(search_pattern):
+    file_list = glob.glob(search_pattern)
+    for _file in file_list:
+        print(_file)
+
+    for file_name in file_list:
         fig, ax = plt.subplots(figsize=(16, 7))
 
         ccd = CCDData.read(file_name, unit='adu')
@@ -125,6 +131,8 @@ def create_plot(mode):
 
         plt.tight_layout()
         plt.show()
+
+    print('END. {}'.format(mode))
 
 
 # print(dir(__import__('goodman_lamps').__file__))

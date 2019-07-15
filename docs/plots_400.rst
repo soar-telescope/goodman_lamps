@@ -4,9 +4,6 @@
 400 M1
 ******
 
-Testing plots
-
-
 .. plot:: plots/plot_400m1.py
 
 400 M2
