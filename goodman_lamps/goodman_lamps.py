@@ -95,7 +95,7 @@ def create_plot(mode):
         print(_file)
 
     for file_name in file_list:
-        fig, ax = plt.subplots(figsize=(16, 7))
+        fig, ax = plt.subplots(figsize=(20, 7))
 
         ccd = CCDData.read(file_name, unit='adu')
         line_list = LineList()
