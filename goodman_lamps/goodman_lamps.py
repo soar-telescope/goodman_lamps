@@ -87,6 +87,8 @@ def create_plot(mode):
     data_path = os.path.dirname(__import__('goodman_lamps').__file__)
     search_pattern = os.path.join(data_path,
                                   'data/lamps/*{:s}*.fits'.format(mode))
+    print(data_path)
+    print(search_pattern)
 
     for file_name in glob.glob(search_pattern):
         fig, ax = plt.subplots(figsize=(16, 7))

@@ -129,6 +129,9 @@ setup(
 
     package_dir={'goodman_lamps': 'goodman_lamps'},
 
+    package_data={'goodman_lamps': ['data/lamps/*.fits',
+                                    'data/nist/*.txt']},
+
 )
 
 

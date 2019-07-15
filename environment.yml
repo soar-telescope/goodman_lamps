@@ -1,10 +1,10 @@
-name: goodman_lamps
+name: goodman_lamps_2
 channels:
   - astroconda
 dependencies:
   - qt
   - astropy
-  - matplotlib==3.0.1
+  - matplotlib
   - numpy
   - pandas==0.23.0
   - pip
@@ -14,7 +14,7 @@ dependencies:
       - ccdproc
       - coveralls
       - m2r
-      - sphinx==1.6.3
+      - sphinx
       - sphinx_rtd_theme
       - sphinxcontrib.napoleon
       - goodman_pipeline==1.2.1.dev6
