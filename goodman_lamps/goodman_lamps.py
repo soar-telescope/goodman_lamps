@@ -90,7 +90,11 @@ def create_plot(mode):
     print(data_path)
     print(search_pattern)
 
-    for file_name in glob.glob(search_pattern):
+    file_list = glob.glob(search_pattern)
+    for _file in file_list:
+        print(_file)
+
+    for file_name in file_list:
         fig, ax = plt.subplots(figsize=(16, 7))
 
         ccd = CCDData.read(file_name, unit='adu')
@@ -127,6 +131,8 @@ def create_plot(mode):
 
         plt.tight_layout()
         plt.show()
+
+    print('END. {}'.format(mode))
 
 
 # print(dir(__import__('goodman_lamps').__file__))
