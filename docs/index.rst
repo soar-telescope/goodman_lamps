@@ -69,6 +69,7 @@ To see a full set of plots of all lamps please visit this `GitHub Repository <ht
    :caption: About
 
    license
+   issues
 
 
 Indices and tables
