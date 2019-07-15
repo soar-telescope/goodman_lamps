@@ -26,8 +26,7 @@ import sys
 __version__ = __import__('goodman_lamps').__version__
 # __version__ = '0.1.0'
 
-extensions = ['matplotlib.sphinxext.only_directives',
-              'matplotlib.sphinxext.plot_directive']
+extensions = ['matplotlib.sphinxext.plot_directive']
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
