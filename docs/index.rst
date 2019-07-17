@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Reference Lamps Library's documentation!
-===================================================
+Goodman Spectrograph Reference Lamp Library
+===========================================
 
 .. image:: https://readthedocs.org/projects/goodman-lamps/badge/?version=latest
     :target: https://goodman-lamps.readthedocs.io/en/latest/?badge=latest
