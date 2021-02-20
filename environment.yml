@@ -6,7 +6,7 @@ dependencies:
   - astropy
   - matplotlib
   - numpy
-  - pandas==0.23.0
+  - pandas
   - pip
   - scipy
   - pip:
