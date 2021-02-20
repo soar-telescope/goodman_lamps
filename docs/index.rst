@@ -48,6 +48,7 @@ To see a full set of plots of all lamps please visit this `GitHub Repository <ht
     1200 M5     GG-455       Yes        Yes        Yes        Yes        Yes         Yes
     1200 M6     GG-495       Yes        Yes        Yes        Yes        Yes         Yes
     1200 M7     OG-570       Yes        Yes        Yes        Yes        Yes         Yes
+    2100 650    GG455        No         No         Yes        No         No          No
    ========== ========== ========== ========== ========== ========== ========== ==========
 
 
@@ -62,6 +63,7 @@ To see a full set of plots of all lamps please visit this `GitHub Repository <ht
    plots_600
    plots_930
    plots_1200
+   plots_2100
 
 
 .. toctree::
