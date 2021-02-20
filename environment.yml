@@ -1,6 +1,5 @@
-name: goodman_lamps_2
-channels:
-  - astroconda
+name: goodman_lamps
+
 dependencies:
   - qt
   - astropy
