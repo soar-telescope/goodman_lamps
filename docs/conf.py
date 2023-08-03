@@ -52,8 +52,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Reference Lamps Library'
-copyright = '2018, Simon Torres'
-author = 'Simon Torres'
+copyright = '2018, Simón Torres'
+author = 'Simón Torres'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -90,7 +90,7 @@ todo_include_todos = False
 #
 # html_theme = 'alabaster'
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'pydata_sphinx_theme'
 
 html_logo = '_static/soar_logo.png'
 

@@ -15,6 +15,6 @@ dependencies:
       - coveralls
       - m2r
       - sphinx
-      - sphinx_rtd_theme
+      - pydata-sphinx-theme
       - sphinxcontrib.napoleon
       - goodman_pipeline
