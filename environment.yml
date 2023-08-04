@@ -1,7 +1,7 @@
 name: goodman_lamps
 
 dependencies:
-  - python=3.7
+  - python
   - qt
   - astropy
   - matplotlib

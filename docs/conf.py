@@ -69,7 +69,7 @@ release = __version__
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+# language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -110,15 +110,6 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-        'donate.html',
-    ]
-}
 
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -129,53 +120,53 @@ htmlhelp_basename = 'ReferenceLampsLibrarydoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
+# latex_elements = {
+#     # The paper size ('letterpaper' or 'a4paper').
+#     #
+#     # 'papersize': 'letterpaper',
+#
+#     # The font size ('10pt', '11pt' or '12pt').
+#     #
+#     # 'pointsize': '10pt',
+#
+#     # Additional stuff for the LaTeX preamble.
+#     #
+#     # 'preamble': '',
+#
+#     # Latex figure (float) alignment
+#     #
+#     # 'figure_align': 'htbp',
+# }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'ReferenceLampsLibrary.tex', 'Reference Lamps Library Documentation',
-     'Simon Torres', 'manual'),
-]
+# latex_documents = [
+#     (master_doc, 'ReferenceLampsLibrary.tex', 'Reference Lamps Library Documentation',
+#      'Simon Torres', 'manual'),
+# ]
 
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'referencelampslibrary', 'Reference Lamps Library Documentation',
-     [author], 1)
-]
+# # (source start file, name, description, authors, manual section).
+# man_pages = [
+#     (master_doc, 'referencelampslibrary', 'Reference Lamps Library Documentation',
+#      [author], 1)
+# ]
 
 
 # -- Options for Texinfo output -------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'ReferenceLampsLibrary', 'Reference Lamps Library Documentation',
-     author, 'ReferenceLampsLibrary', 'One line description of project.',
-     'Miscellaneous'),
-]
+# #  dir menu entry, description, category)
+# texinfo_documents = [
+#     (master_doc, 'ReferenceLampsLibrary', 'Reference Lamps Library Documentation',
+#      author, 'ReferenceLampsLibrary', 'One line description of project.',
+#      'Miscellaneous'),
+# ]
 
 
 

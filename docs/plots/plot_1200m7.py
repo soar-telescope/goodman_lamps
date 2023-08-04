@@ -2,5 +2,11 @@ from __future__ import absolute_import
 
 from goodman_lamps.goodman_lamps import create_plot
 
-if __name__ == '__main__':
-    create_plot(mode='1200M7')
+
+def dark_theme():
+    create_plot(mode='1200M7', dark=True)
+
+
+def light_theme():
+    create_plot(mode='1200M7', dark=False)
+
