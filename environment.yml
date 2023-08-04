@@ -1,7 +1,7 @@
 name: goodman_lamps
 
 dependencies:
-  - python=3.7
+  - python
   - qt
   - astropy
   - matplotlib
@@ -15,6 +15,6 @@ dependencies:
       - coveralls
       - m2r
       - sphinx
-      - sphinx_rtd_theme
+      - pydata-sphinx-theme
       - sphinxcontrib.napoleon
       - goodman_pipeline

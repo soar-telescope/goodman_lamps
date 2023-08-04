@@ -81,8 +81,10 @@ class LineList(object):
     #     assert len(pixel) == len(wavelength)
 
 
+def create_plot(mode, dark=False):
 
-def create_plot(mode):
+    if dark:
+        plt.style.use('dark_background')
 
     data_path = os.path.dirname(__import__('goodman_lamps').__file__)
     search_pattern = os.path.join(data_path,
