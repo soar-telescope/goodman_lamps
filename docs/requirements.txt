@@ -1,0 +1,12 @@
+recommonmark
+numpy
+pandas
+ccdproc
+coveralls
+astroplan
+matplotlib
+scipy
+astropy
+sphinx
+sphinxcontrib.napoleon
+pydata-sphinx-theme
