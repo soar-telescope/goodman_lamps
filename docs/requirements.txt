@@ -7,7 +7,7 @@ astroplan
 matplotlib
 scipy
 astropy
-goodman-pipeline
 sphinx
 sphinxcontrib.napoleon
+goodman-pipeline
 pydata-sphinx-theme
