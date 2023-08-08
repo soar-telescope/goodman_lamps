@@ -9,4 +9,5 @@ scipy
 astropy
 sphinx
 sphinxcontrib.napoleon
+goodman-pipeline
 pydata-sphinx-theme
