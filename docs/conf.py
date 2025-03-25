@@ -90,6 +90,17 @@ pygments_style = 'sphinx'
 
 html_theme = 'pydata_sphinx_theme'
 
+html_theme_options = {
+    "navbar_end": ["navbar-icon-links"],
+    "icon_links": [
+        {
+            "name": "SOAR Docs Index",
+            "url": "https://soardocs.readthedocs.io/",  # or relative path "../index"
+            "icon": "fa fa-home",
+        }
+    ],
+}
+
 html_logo = '_static/soar_logo.png'
 
 # Theme options are theme-specific and customize the look and feel of a theme
